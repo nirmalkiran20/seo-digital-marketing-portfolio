@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Calendar, Clock, ArrowLeft, Eye } from 'lucide-react';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/markdown';
@@ -70,9 +71,11 @@ export default async function ArticlePage({ params }: { params: Params }) {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="rounded-2xl border bg-white/70 dark:bg-neutral-800/50 backdrop-blur-lg shadow-lg p-8">
           <div
-            className="prose prose-lg max-w-none dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: article.content }}
-          />
+  className="prose prose-lg max-w-none dark:prose-invert 
+             prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline 
+             dark:prose-a:text-blue-400"
+  dangerouslySetInnerHTML={{ __html: article.content }}
+/>
         </div>
       </div>
     </div>

@@ -156,3 +156,21 @@ pre {
 }
 
 
+/* Tailwind prose links customization */
+.prose a {
+  color: #2563eb; /* Tailwind's blue-600 */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode */
+.dark .prose a {
+  color: #60a5fa; /* Tailwind's blue-400 */
+}
+.dark .prose a:hover {
+  text-decoration: underline;
+}
