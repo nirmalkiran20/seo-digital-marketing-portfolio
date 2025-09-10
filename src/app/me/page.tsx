@@ -65,7 +65,7 @@ export default function MePage() {
           </div>
           <h2 className="text-3xl font-semibold">Digital Marketing Specialist</h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            9.7+ Years of Experience • ROI-Focused • Data-Driven
+            9+ Years of Experience • ROI-Focused • Data-Driven
           </p>
         </motion.div>
 

@@ -174,3 +174,13 @@ pre {
 .dark .prose a:hover {
   text-decoration: underline;
 }
+
+/* Hide scrollbar but keep scrolling */
+.search-dropdown {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE and Edge */
+}
+
+.search-dropdown::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}

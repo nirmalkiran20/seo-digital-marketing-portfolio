@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import HomeButtons from '@/components/HomeButtons';
-import { usePathname } from "next/navigation";
+
 
 
 // Load Inter font for non-Apple devices
