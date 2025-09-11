@@ -16,33 +16,84 @@ let loaded = false;
 
 // Optional: inline a few blog items or switch to a static JSON import later
 const inlineBlogs: BaseItem[] = [
-  { title: 'GA4 Migration Checklist', path: '/blog/ga4-migration-checklist', type: 'Blog', category: 'Analytics',
-    content: 'Event mapping, conversions, audiences, Looker Studio templates' },
-  { title: 'Scaling Google Ads with PMax', path: '/blog/scaling-google-ads-pmax', type: 'Blog', category: 'Paid Ads',
-    content: 'Asset groups, audience signals, budget pacing, ROAS stability' },
+  {
+    title: 'GA4 Migration Checklist',
+    path: '/blog/ga4-migration-checklist',
+    type: 'Blog',
+    category: 'Analytics',
+    content: 'Event mapping, conversions, audiences, Looker Studio templates',
+  },
+  {
+    title: 'Scaling Google Ads with PMax',
+    path: '/blog/scaling-google-ads-pmax',
+    type: 'Blog',
+    category: 'Paid Ads',
+    content: 'Asset groups, audience signals, budget pacing, ROAS stability',
+  },
 ];
 
 async function loadIndexOnce() {
   if (loaded) return;
 
   const staticPages: BaseItem[] = [
-    { title: 'About Me', path: '/me', type: 'Page', category: 'About',
-      content: 'Digital Marketing Specialist with SEO, SEM, SMM, Google Ads, GA4, and Looker Studio' },
-    { title: 'Projects', path: '/projects', type: 'Page', category: 'Work',
-      content: 'SEO campaigns, Google Ads, optimization, and social media marketing' },
-    { title: 'Skills', path: '/skills', type: 'Page', category: 'Expertise',
-      content: 'SEO strategy, Google Ads, GA4 analytics, Looker Studio, keyword research, technical SEO, content strategy, SEM' },
-    { title: 'Blog', path: '/blog', type: 'Page', category: 'Articles',
-      content: 'Digital marketing insights, SEO case studies, Google Ads tips, and more' },
-    { title: 'Contact', path: '/contact', type: 'Page', category: 'Contact',
-      content: 'get in touch via email, LinkedIn collaboration.' },
+    {
+      title: 'About Me',
+      path: '/me',
+      type: 'Page',
+      category: 'About',
+      content:
+        'Digital Marketing Specialist with SEO, SEM, SMM, Google Ads, GA4, and Looker Studio',
+    },
+    {
+      title: 'Projects',
+      path: '/projects',
+      type: 'Page',
+      category: 'Work',
+      content:
+        'SEO campaigns, Google Ads, optimization, and social media marketing',
+    },
+    {
+      title: 'Skills',
+      path: '/skills',
+      type: 'Page',
+      category: 'Expertise',
+      content:
+        'SEO strategy, Google Ads, GA4 analytics, Looker Studio, keyword research, technical SEO, content strategy, SEM',
+    },
+    {
+      title: 'Blog',
+      path: '/blog',
+      type: 'Page',
+      category: 'Articles',
+      content:
+        'Digital marketing insights, SEO case studies, Google Ads tips, and more',
+    },
+    {
+      title: 'Contact',
+      path: '/contact',
+      type: 'Page',
+      category: 'Contact',
+      content: 'get in touch via email, LinkedIn collaboration.',
+    },
   ];
 
   const projects: BaseItem[] = [
-    { title: 'E-commerce SEO Campaign', path: '/projects', type: 'Project', category: 'SEO',
-      content: 'increased organic traffic 50%, technical SEO optimization' },
-    { title: 'Google Ads Performance Campaign', path: '/projects', type: 'Project', category: 'Paid Ads',
-      content: 'reduced CPA by 45%, improved ROAS, landing page testing' },
+    {
+      title: 'E-commerce SEO Campaign',
+      path: '/projects',
+      type: 'Project',
+      category: 'SEO',
+      content:
+        'increased organic traffic 50%, technical SEO optimization',
+    },
+    {
+      title: 'Google Ads Performance Campaign',
+      path: '/projects',
+      type: 'Project',
+      category: 'Paid Ads',
+      content:
+        'reduced CPA by 45%, improved ROAS, landing page testing',
+    },
   ];
 
   const dataset = [...staticPages, ...projects, ...inlineBlogs];
@@ -60,7 +111,7 @@ async function loadIndexOnce() {
   loaded = true;
 }
 
-export async function searchContent(query: string, limit = 10) {
+export async function searchContent(query: string, limit = 50) {
   if (!query.trim()) return [];
   await loadIndexOnce();
   const results = fuse!.search(query);
@@ -68,15 +119,6 @@ export async function searchContent(query: string, limit = 10) {
     title: r.item.title,
     path: r.item.path,
     category: r.item.category,
-    snippet: makeSnippet(r.item.content ?? '', query),
+    snippet: r.item.content ?? '', // ✅ full content always
   }));
-}
-
-function makeSnippet(content: string, q: string) {
-  const l = content.toLowerCase();
-  const i = l.indexOf(q.toLowerCase());
-  if (i === -1) return content.substring(0, 100) + (content.length > 100 ? '...' : '');
-  const start = Math.max(0, i - 30);
-  const end = Math.min(content.length, i + q.length + 30);
-  return (start > 0 ? '...' : '') + content.substring(start, end) + (end < content.length ? '...' : '');
 }
