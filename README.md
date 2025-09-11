@@ -20,7 +20,7 @@ Showcasing projects, blogs, skills, and achievements in a sleek design.
 
 ## 🚀 Demo
 
-🔗 [Live Site](https://your-vercel-link.vercel.app) *(update once deployed)*  
+🔗 [Live Site](https://seo-digital-marketing-portfolio.vercel.app/) *(update once deployed)*  
 
 ---
 
