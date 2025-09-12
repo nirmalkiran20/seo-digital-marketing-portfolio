@@ -50,7 +50,7 @@ async function loadIndexOnce() {
       type: 'Page',
       category: 'Work',
       content:
-        'SEO campaigns, Google Ads, optimization, and social media marketing',
+        'SEO campaigns, Google Ads, optimization, YouTube, and social media marketing',
     },
     {
       title: 'Skills',
@@ -73,18 +73,18 @@ async function loadIndexOnce() {
       path: '/contact',
       type: 'Page',
       category: 'Contact',
-      content: 'get in touch via email, LinkedIn collaboration.',
+      content: 'Get in touch via email, LinkedIn collaboration.',
     },
   ];
 
   const projects: BaseItem[] = [
     {
-      title: 'E-commerce SEO Campaign',
+      title: 'E-commerce Audit',
       path: '/projects',
       type: 'Project',
       category: 'SEO',
       content:
-        'increased organic traffic 50%, technical SEO optimization',
+        'Increased organic traffic by 50%, technical SEO, optimization',
     },
     {
       title: 'Google Ads Performance Campaign',
@@ -92,7 +92,7 @@ async function loadIndexOnce() {
       type: 'Project',
       category: 'Paid Ads',
       content:
-        'reduced CPA by 45%, improved ROAS, landing page testing',
+        'Reduced CPA by 45%, improved ROAS, landing page testing',
     },
   ];
 
