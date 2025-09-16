@@ -1,5 +1,5 @@
 'use client';
-
+import { ArrowLeft } from 'lucide-react';
 import FluidCursor from '@/components/FluidCursor';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -26,17 +26,21 @@ export default function MePage() {
       <FluidCursor />
   
 
-      {/* Back Navigation */}
-      <div className="fixed top-3 left-3 z-50">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 
-                     text-sm font-medium text-black shadow-md backdrop-blur-lg transition 
-                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-        >
-          ←🏠
-        </Link>
-      </div>
+{/* Back Navigation */}
+<div className="fixed top-3 left-3 z-50">
+  <Link 
+    href="/"
+    className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
+              text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+              hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+  ><ArrowLeft size={16} /><Image 
+      src="/home.gif" 
+      alt="Home" 
+      width={25} 
+      height={16} 
+    />
+  </Link>
+</div>
 
       {/* Main Content Card */}
       <motion.div
@@ -113,8 +117,8 @@ export default function MePage() {
         <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
             { value: '9.7+', label: 'Years Experience', color: 'text-blue-600' },
-            { value: '200+', label: 'Campaigns Managed', color: 'text-green-600' },
-            { value: '500%', label: 'Avg ROI Improvement', color: 'text-purple-600' }
+            { value: '20+', label: 'Campaigns Managed', color: 'text-green-600' },
+            { value: '65%', label: 'Avg ROI Improvement', color: 'text-purple-600' }
           ].map((stat) => (
             <div 
               key={stat.label}

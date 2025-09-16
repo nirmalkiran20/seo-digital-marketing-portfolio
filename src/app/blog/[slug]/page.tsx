@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, Clock, ArrowLeft, Eye } from 'lucide-react';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/markdown';
@@ -23,12 +23,33 @@ export default async function ArticlePage({ params }: { params: Params }) {
       <FluidCursor />
 
       {/* Back button */}
-      <div className="fixed top-3 left-3 z-50">
+      <div className="fixed top-3 left-19 z-50">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+          className="inline-flex items-center gap-2 rounded-full border
+           bg-white/30 px-2 py-1 text-xs font-medium
+            text-black shadow-md backdrop-blur-lg transition
+             hover:bg-white/60 dark:border-white dark:text-white
+              dark:hover:bg-neutral-800"
         >
           <ArrowLeft size={16} /> Blog
+        </Link>
+      </div>
+
+      {/* Back Navigation */}
+      <div className="fixed top-3 left-3 z-50">
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
+                    text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+                    hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+        ><ArrowLeft size={16} />
+        <Image 
+            src="/home.gif" 
+            alt="Home" 
+            width={16} 
+            height={16} 
+          />
         </Link>
       </div>
 

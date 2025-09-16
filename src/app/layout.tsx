@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Digital Marketing Portfolio",
+  description: "SEO Digital Marketing Portfolio",
   keywords: [
     "Kiran", 
     "Portfolio", 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Kiran",
-      url: "",
+      url: "https://github.com/nirmalkiran20/",
     },
   ],
   creator: "Kiran",

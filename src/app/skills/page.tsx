@@ -1,8 +1,9 @@
 'use client';
-
+import { ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import FluidCursor from '@/components/FluidCursor';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CheckCircle2, Sparkles, Target, TrendingUp, Gauge, Trophy, Shield } from 'lucide-react';
 
 const sectionVariants = {
@@ -89,18 +90,22 @@ export default function SkillsPage() {
       {/* Fluid Cursor Behind */}
       <FluidCursor />
 
-      {/* Back Home Button */}
-      <div className="fixed top-3 left-3 z-100">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-        >
-          ←🏠
-        </Link>
-      </div>
-
-
-
+{/* Back Navigation */}
+<div className="fixed top-3 left-3 z-50">
+  <Link 
+    href="/"
+    className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
+              text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+              hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+  ><ArrowLeft size={16} />
+  <Image 
+      src="/home.gif" 
+      alt="Home" 
+      width={25} 
+      height={16} 
+    />
+  </Link>
+</div>
 
       <main className="relative z-10 max-w-6xl mx-auto w-full">
         {/* Header */}

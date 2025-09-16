@@ -113,7 +113,7 @@ export default function Home() {
       {/* Top-right link */}
       <div className="absolute top-6 right-8 z-20">
         <a
-          href="https://github.com/yourusername/your-repo"
+          href="https://github.com/nirmalkiran20/seo-digital-marketing-portfolio/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"

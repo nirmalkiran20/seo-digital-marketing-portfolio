@@ -59,13 +59,13 @@ pnpm install
 
 Run locally:
 
-pnpm run dev
+npm run dev
 
 
 Build for production:
 
-pnpm run build
-pnpm start
+npm run build
+npm start
 
 📂 Folder Structure
 src/

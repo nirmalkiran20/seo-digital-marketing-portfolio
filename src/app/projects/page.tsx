@@ -1,5 +1,5 @@
 'use client';
-
+import { ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import FluidCursor from '@/components/FluidCursor';
 import { ExternalLink } from 'lucide-react';
@@ -19,20 +19,20 @@ const cardVariants = {
 
 export default function ProjectsPage() {
   const presentations = [
-    { title: 'SEO Strategy 2025', image: '/project.jpeg', link: '#' },
-    { title: 'Google Ads Masterclass', image: '/project.jpeg', link: '#' },
-    { title: 'Analytics Dashboard Walkthrough', image: '/project.jpeg', link: '#' },
+    { title: 'SEO Strategy 2025', image: '/team.png', link: '#' },
+    { title: 'Google Ads Masterclass', image: '/team1.png', link: '#' },
+    { title: 'Analytics Dashboard Walkthrough', image: '/team2.png', link: '#' },
   ];
 
   const videos = [
-    { title: 'Podcast on Growth Marketing', image: '/project.jpeg', link: '#' },
-    { title: 'YouTube Interview: Future of SEO', image: '/project.jpeg', link: '#' },
+    { title: 'Podcast on Growth Marketing', image: '/team3.png', link: '#' },
+    { title: 'YouTube Interview: Future of SEO', image: '/team4.png', link: '#' },
   ];
 
   const otherProjects = [
-    { title: 'E-commerce SEO Audit', image: '/project.jpeg', link: '#' },
-    { title: 'Ad Campaign Optimization', image: '/project.jpeg', link: '#' },
-    { title: 'Content Strategy Roadmap', image: '/project.jpeg', link: '#' },
+    { title: 'E-commerce SEO Audit', image: '/team5.png', link: '#' },
+    { title: 'Ad Campaign Optimization', image: '/team6.png', link: '#' },
+    { title: 'Content Strategy Roadmap', image: '/team7.png', link: '#' },
   ];
 
   return (
@@ -40,17 +40,22 @@ export default function ProjectsPage() {
       {/* Fluid background */}
       <FluidCursor />
 
-      {/* Navigation back */}
-      <div className="fixed top-3 left-3 z-100">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-        >
-         ←🏠
-        </Link>
-      </div>
-
-     
+{/* Back Navigation */}
+<div className="fixed top-3 left-3 z-50">
+  <Link 
+    href="/"
+    className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
+              text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+              hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+  ><ArrowLeft size={16} />
+  <Image 
+      src="/home.gif" 
+      alt="Home" 
+      width={25} 
+      height={16} 
+    />
+  </Link>
+</div>
 
       <main className="relative z-10 w-full max-w-6xl mx-auto px-4 pt-28 pb-20">
         {/* Heading */}
@@ -69,8 +74,8 @@ export default function ProjectsPage() {
         {/* Reusable Section Component */}
         {[
           { title: '📊 My Presentations (PPTs)', items: presentations },
-          { title: '🎤 Video & Podcast Appearances', items: videos },
-          { title: '💡 Other Digital Marketing Projects', items: otherProjects },
+          { title: '🎬 My Video Creatives', items: videos },
+          { title: '💡 Other Projects', items: otherProjects },
         ].map(({ title, items }) => (
           <motion.section
             key={title}

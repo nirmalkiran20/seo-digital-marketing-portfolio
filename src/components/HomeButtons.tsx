@@ -48,7 +48,7 @@ export default function HomeButtons({ exclude }: HomeButtonsProps) {
 
   return (
     <div
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex flex-wrap items-center gap-2"
+      className="fixed top-3 left-1/2 -translate-x-1/2 z-50 flex flex-wrap items-center gap-2"
       aria-label="Quick navigation"
     >
       {items.map((b) => (
@@ -56,7 +56,7 @@ export default function HomeButtons({ exclude }: HomeButtonsProps) {
           key={b.key}
           href={b.href}
           className="inline-flex items-center gap-2 rounded-full border border-neutral-200/70 dark:border-white/15 
-                     bg-white/70 dark:bg-neutral-900/60 px-3 py-1.5 text-sm font-medium text-neutral-900 dark:text-neutral-100 
+                     bg-white/70 dark:bg-neutral-900/60 px-2 py-1 text-sm font-medium text-neutral-700 dark:text-neutral-100 
                      shadow-sm backdrop-blur-md hover:bg-white/90 dark:hover:bg-neutral-900/80 transition"
         >
           {b.icon}
