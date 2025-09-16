@@ -1,4 +1,4 @@
-# 🌐 Digital Portfolio - Kiran
+# 🌐 SEO Digital Portfolio - Kiran
 
 A modern, responsive **personal portfolio website** built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Framer Motion](https://www.framer.com/motion/).  
 Showcasing projects, blogs, skills, and achievements in a sleek design.
@@ -49,23 +49,23 @@ Showcasing projects, blogs, skills, and achievements in a sleek design.
 Clone the repo:
 
 ```bash
-git clone https://github.com/nirmalkiran20/digital-portfolio-project.git
-cd digital-portfolio-project
+git clone https://github.com/nirmalkiran20/seo-digital-marketing-portfolio.git
+cd seo-digital-marketing-portfolio
 
 Install dependencies:
 
-npm install
+pnpm install
 
 
 Run locally:
 
-npm run dev
+pnpm run dev
 
 
 Build for production:
 
-npm run build
-npm start
+pnpm run build
+pnpm start
 
 📂 Folder Structure
 src/
@@ -94,3 +94,7 @@ This project is MIT Licensed — feel free to use it for your own portfolio.
 git add README.md
 git commit -m "Added project README"
 git push
+
+
+
+Inspired from toukoum
