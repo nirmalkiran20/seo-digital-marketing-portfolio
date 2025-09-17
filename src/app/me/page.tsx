@@ -78,13 +78,10 @@ export default function MePage() {
           <motion.div variants={itemVariants} className="rounded-2xl border bg-white/30 p-6 backdrop-blur-lg dark:bg-neutral-800/30">
             <h3 className="text-2xl font-semibold mb-4 text-blue-600">My Story</h3>
             <p className="text-neutral-700 dark:text-neutral-300 mb-4">
-              With nearly a decade in digital marketing, I've helped businesses across industries 
-              achieve remarkable growth through strategic SEO, targeted advertising campaigns, 
-              and comprehensive analytics implementations.
+              For nearly a decade, I've specialized in helping businesses achieve remarkable growth. My expertise covers the full digital marketing ecosystem, from strategic SEO and targeted advertising to comprehensive analytics, ensuring every campaign delivers measurable ROI.
             </p>
             <p className="text-neutral-700 dark:text-neutral-300">
-              My expertise spans the entire digital marketing ecosystem - from technical SEO audits 
-              that boost organic visibility to performance marketing campaigns that deliver measurable ROI.
+              I'm particularly passionate about bridging the gap between technical strategy and creative execution. This means not only optimizing a website's backend for search engines but also crafting compelling content and running performance marketing campaigns that connect with the right audience. My work often involves technical SEO audits to boost organic visibility, followed by a data-driven approach to fine-tune advertising efforts. Ultimately, I focus on turning complex data into actionable insights that drive sustainable business growth.
             </p>
           </motion.div>
 
@@ -93,13 +90,19 @@ export default function MePage() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 'SEO Strategy',
-                'Google Ads',
-                'Social Media Marketing', 
-                'GA4 Analytics',
-                'Looker Studio',
-                'SEM Campaigns',
-                'Performance Marketing',
-                'Conversion Optimization'
+'Google Ads (PPC)',
+'Social Media Marketing',
+'GA4 Analytics & Reporting',
+'Conversion Rate Optimization (CRO)',
+'Performance Marketing',
+'Technical SEO Audits',
+'Content Marketing',
+'Email Marketing',
+'E-commerce Marketing',
+'Project Management',
+'Brand Development',
+'Data Visualization',
+'Customer Journey Mapping'
               ].map((skill) => (
                 <div 
                   key={skill}
@@ -118,7 +121,7 @@ export default function MePage() {
           {[
             { value: '9.7+', label: 'Years Experience', color: 'text-blue-600' },
             { value: '20+', label: 'Campaigns Managed', color: 'text-green-600' },
-            { value: '65%', label: 'Avg ROI Improvement', color: 'text-purple-600' }
+            { value: '45%', label: 'Avg ROI Improvement', color: 'text-purple-600' }
           ].map((stat) => (
             <div 
               key={stat.label}

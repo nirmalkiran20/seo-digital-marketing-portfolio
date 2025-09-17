@@ -37,9 +37,7 @@ export default function BlogPage() {
       height={16} 
     />
   </Link>
-</div>
-
-    
+</div>    
 
       <div className="mb-10 text-center">
         <h1 className="text-5xl font-bold mb-3">Digital Marketing Insights</h1>
@@ -149,7 +147,7 @@ export default function BlogPage() {
                 </p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-2 text-white hover:text-black transition-colors font-medium text-sm"
                 >
                   Read Article <ArrowRight size={14} />
                 </Link>
