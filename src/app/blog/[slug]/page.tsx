@@ -81,7 +81,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
               <span>•</span>
               <span className="flex items-center gap-1"><Eye size={14} /> {article.views} views</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 dark:text-sky-400 leading-tight mb-4">
               {article.title}
             </h1>
           </div>
