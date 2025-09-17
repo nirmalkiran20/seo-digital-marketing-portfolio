@@ -67,7 +67,7 @@ const tools = [
 const certifications = [
   { name: 'Google Analytics GA4 Certification', issuer: 'Google', year: '2024' },
   { name: 'Google Ads Search Certification', issuer: 'Google', year: '2024' },
-  { name: 'SEMrush AI Certification', issuer: 'Meta', year: '2024' },
+  { name: 'SEMrush AI Certification', issuer: 'SEMrush', year: '2024' },
 ];
 
 function Meter({ value, color = '#3b82f6' }: { value: number; color?: string }) {

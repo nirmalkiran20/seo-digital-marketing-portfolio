@@ -18,14 +18,14 @@ let loaded = false;
 const inlineBlogs: BaseItem[] = [
   {
     title: 'GA4 Migration Checklist',
-    path: '/blog/ga4-migration-checklist',
+    path: 'https://seo-digital-marketing-portfolio.vercel.app/blog/ga4-attribution-models-explained',
     type: 'Blog',
     category: 'Analytics',
     content: 'Event mapping, conversions, audiences, Looker Studio templates',
   },
   {
     title: 'Scaling Google Ads with PMax',
-    path: '/blog/scaling-google-ads-pmax',
+    path: 'https://seo-digital-marketing-portfolio.vercel.app/blog/google-ads-performance-max-guide',
     type: 'Blog',
     category: 'Paid Ads',
     content: 'Asset groups, audience signals, budget pacing, ROAS stability',
