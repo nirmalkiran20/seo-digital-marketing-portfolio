@@ -64,7 +64,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-4 text-white/80">
+            <div className="flex items-center gap-2 mb-4 text-white drop-shadow-[0_0_6px_#3b82f6]">
               <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium">
                 {article.category}
               </span>
@@ -81,7 +81,10 @@ export default async function ArticlePage({ params }: { params: Params }) {
               <span>•</span>
               <span className="flex items-center gap-1"><Eye size={14} /> {article.views} views</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 dark:text-sky-400 leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold 
+             text-white dark:text-sky-400 
+             leading-tight mb-4 
+             drop-shadow-[0_0_10px_#3b82f6]">
               {article.title}
             </h1>
           </div>
