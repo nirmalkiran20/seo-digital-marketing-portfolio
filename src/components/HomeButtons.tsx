@@ -20,13 +20,15 @@ const BUTTONS: Btn[] = [
   { key: 'contact',  label: 'Contact',  href: '/contact', icon: <Mail size={16} /> },
 ];
 
-function activeKeyFromPath(pathname: string): Btn['key'] {
+// 👇 We add 'cv' as a recognized page, but NOT in BUTTONS (so no CV button is rendered)
+function activeKeyFromPath(pathname: string): Btn['key'] | 'cv' {
   if (pathname === '/' || pathname.startsWith('/#')) return 'home';
   if (pathname.startsWith('/me')) return 'me';
   if (pathname.startsWith('/skills')) return 'skills';
   if (pathname.startsWith('/projects')) return 'projects';
   if (pathname.startsWith('/blog')) return 'blog';
   if (pathname.startsWith('/contact')) return 'contact';
+  if (pathname.startsWith('/cv')) return 'cv';  // ✅ treat /cv as its own page
   return 'home';
 }
 
@@ -42,7 +44,8 @@ export default function HomeButtons({ exclude }: HomeButtonsProps) {
   if (active === 'home') return null;
 
   // 2️⃣ Hide active page + Home button
-  const toHide = new Set<Btn['key']>(['home', active]);
+  // Note: when active === 'cv', we only hide Home (since cv is not in BUTTONS anyway)
+  const toHide = new Set<Btn['key'] | 'cv'>(['home', active]);
 
   const items = BUTTONS.filter((b) => !toHide.has(b.key));
 
@@ -66,5 +69,3 @@ export default function HomeButtons({ exclude }: HomeButtonsProps) {
     </div>
   );
 }
-
-

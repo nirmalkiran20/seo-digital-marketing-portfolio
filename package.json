@@ -37,6 +37,7 @@
     "react-dom": "^19.0.0",
     "react-github-btn": "^1.4.0",
     "react-pageflip": "^2.0.3",
+    "react-pdf": "^10.1.0",
     "rehype-external-links": "^3.0.0",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",

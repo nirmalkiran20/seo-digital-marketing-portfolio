@@ -1,5 +1,5 @@
 'use client';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react';
 import FluidCursor from '@/components/FluidCursor';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -22,22 +22,23 @@ export default function ContactPage() {
       {/* Fluid Cursor Behind */}
       <FluidCursor />
 
-{/* Back Navigation */}
-<div className="fixed top-3 left-3 z-50">
-  <Link 
-    href="/"
-    className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
-              text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
-              hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-  ><ArrowLeft size={16} />
-  <Image 
-      src="/home.gif" 
-      alt="Home" 
-      width={25} 
-      height={16} 
-    />
-  </Link>
-</div>
+      {/* Back Navigation */}
+      <div className="fixed top-3 left-3 z-50">
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
+                     text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+        >
+          <ArrowLeft size={16} />
+          <Image 
+            src="/home.gif" 
+            alt="Home" 
+            width={25} 
+            height={16} 
+          />
+        </Link>
+      </div>
 
       {/* Heading */}
       <motion.div
@@ -83,8 +84,24 @@ export default function ContactPage() {
           </motion.a>
         </div>
       </motion.div>
+
+      {/* View CV Button at bottom */}
+      <motion.div
+        className="mt-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="relative z-50 mt-6">
+        <Link 
+          href="/cv" 
+          className="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-3 py-1.5 
+                     text-white font-medium shadow-md transition hover:bg-blue-700"
+        >
+          <Download size={16} /> View CV
+        </Link>
+        </div>
+      </motion.div>
     </div>
   );
 }
-
-
