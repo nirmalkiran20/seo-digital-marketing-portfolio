@@ -19,21 +19,21 @@ const cardVariants = {
 
 export default function ProjectsPage() {
   const presentations = [
-    { title: 'SEO Strategy 2025', image: '/team.png', link: '#' },
-    { title: 'Google Ads Masterclass', image: '/team1.png', link: '#' },
-    { title: 'Analytics Dashboard Walkthrough', image: '/team2.png', link: '#' },
-  ];
+  { title: 'Micro Influencers', image: '/team.png', link: '/projects/presentations/seo-strategy-2025' },
+  { title: 'B2B Paid Ads', image: '/team1.png', link: '/projects/presentations/google-ads-masterclass' },
+  { title: 'Real-Time Analytics', image: '/team2.png', link: '/projects/presentations/analytics-dashboard' },
+];
 
   const videos = [
-    { title: 'Podcast on Growth Marketing', image: '/team3.png', link: '#' },
-    { title: 'YouTube Interview: Future of SEO', image: '/team4.png', link: '#' },
-  ];
+  { title: 'Customer Acquisition Strategies', image: '/team3.png', link: '/projects/videos/podcast-growth-marketing' },
+  { title: 'Strategies for Meaningful Customer Connections', image: '/team4.png', link: '/projects/videos/future-seo-interview' },
+];
 
   const otherProjects = [
-    { title: 'E-commerce SEO Audit', image: '/team5.png', link: '#' },
-    { title: 'Ad Campaign Optimization', image: '/team6.png', link: '#' },
-    { title: 'Content Strategy Roadmap', image: '/team7.png', link: '#' },
-  ];
+  { title: 'E-commerce SEO Audit', image: '/team5.png', link: '/projects/others/ecommerce-seo-audit' },
+  { title: 'Ad Campaign Optimization', image: '/team6.png', link: '/projects/others/ad-campaign-optimization' },
+  { title: 'Content Strategy Roadmap', image: '/team7.png', link: '/projects/others/content-strategy-roadmap' },
+];
 
   return (
     <div className="relative min-h-screen flex flex-col">
@@ -65,9 +65,9 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-bold mb-3">My Recent Work & Portfolio</h1>
+          <h1 className="text-5xl font-bold mb-3">My Recent Work</h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-            A showcase of my presentations, podcasts, and digital marketing projects.
+            A showcase of my presentations, videos, and digital marketing projects.
           </p>
         </motion.div>
 
@@ -101,7 +101,9 @@ export default function ProjectsPage() {
                     <h3 className="text-xl font-semibold mb-2">{title}</h3>
                     <a
                       href={link}
-                      className="inline-flex items-center gap-2 text-blue-600 hover:underline dark:text-blue-400"
+                      className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-3 py-1 
+text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+dark:border-white dark:text-white dark:hover:bg-neutral-800 hover:bg-blue-400 hover:text-white"
                     >
                       View <ExternalLink size={16} />
                     </a>
