@@ -249,39 +249,38 @@ export default function Home() {
 </div>
 
       {/* Buttons */}
+<motion.div
+  variants={bottomElementVariants}
+  initial="hidden"
+  animate="visible"
+  className="z-10 -mt-4 flex w-full flex-col items-center justify-center md:px-0">
+  <motion.div
+    variants={buttonsContainerVariants}
+    animate={showResults && (searchResults.length > 0 || input.trim()) ? 'searchActive' : 'normal'}
+    className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3 max-w-xs sm:max-w-md md:max-w-2xl w-full"
+  >
+    {questionConfig.map(({ key, color, icon: Icon }, index) => (
       <motion.div
-        variants={bottomElementVariants}
-        initial="hidden"
-        animate="visible"
-        className="z-10 -mt-4 flex w-full flex-col items-center justify-center md:px-0"
+        key={key}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 + index * 0.1 }}
       >
-        <motion.div
-          variants={buttonsContainerVariants}
-          animate={showResults && (searchResults.length > 0 || input.trim()) ? 'searchActive' : 'normal'}
-          className="grid w-full max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 md:grid-cols-5"
+        <Button
+          onClick={() => handleSectionClick(key)}
+          variant="outline"
+          className="border-border hover:bg-border/30 aspect-square w-full cursor-pointer rounded-2xl border bg-white/30 
+                     py-6 sm:py-6 shadow-none backdrop-blur-lg transition-transform active:scale-95 md:p-10"
         >
-          {questionConfig.map(({ key, color, icon: Icon }, index) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + index * 0.1 }}
-            >
-              <Button
-                onClick={() => handleSectionClick(key)}
-                variant="outline"
-                className="border-border hover:bg-border/30 aspect-square w-full cursor-pointer rounded-2xl border bg-white/30 py-8 shadow-none backdrop-blur-lg transition-transform active:scale-95 md:p-10"
-              >
-                <div className="flex h-full flex-col items-center justify-center gap-1 text-gray-700">
-                  <Icon size={22} strokeWidth={2} color={color} />
-                  <span className="text-xs font-medium sm:text-sm">{key}</span>
-                </div>
-              </Button>
-            </motion.div>
-          ))}
-        </motion.div>
+          <div className="flex h-full flex-col items-center justify-center gap-1 text-gray-700">
+            <Icon size={18} strokeWidth={2} color={color} />
+            <span className="text-xs font-medium sm:text-sm">{key}</span>
+          </div>
+        </Button>
       </motion.div>
-
+    ))}
+  </motion.div>
+</motion.div>
       <FluidCursor />
     </div>
   );

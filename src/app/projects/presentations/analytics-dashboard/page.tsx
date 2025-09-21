@@ -10,10 +10,10 @@ export default function AnalyticsDashboardPage() {
     <div className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16">
       <FluidCursor />
 
-      {/* Back Navigation */}
+      {/* Back Navigation Home */}
       <div className="fixed top-3 left-3 z-50">
         <Link
-          href="/projects"
+          href="/"
           className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
                     text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
@@ -22,6 +22,20 @@ export default function AnalyticsDashboardPage() {
           <Image src="/home.gif" alt="Home" width={16} height={16} />
         </Link>
       </div>
+
+      {/* Back button */}
+            <div className="fixed top-3 left-19 z-50">
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 rounded-full border
+                 bg-white/30 px-2 py-1 text-xs font-medium
+                  text-black shadow-md backdrop-blur-lg transition
+                   hover:bg-white/60 dark:border-white dark:text-white
+                    dark:hover:bg-neutral-800"
+              >
+                <ArrowLeft size={16} /> Back
+              </Link>
+            </div>
 
       {/* Heading */}
       <motion.div

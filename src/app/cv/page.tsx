@@ -85,7 +85,7 @@ export default function CVPage() {
 
       {/* Download CV Button (Bottom) */}
       <motion.div
-        className="mt-6 relative z-50"
+        className="mt-4 relative z-50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}

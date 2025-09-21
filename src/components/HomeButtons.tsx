@@ -50,10 +50,11 @@ export default function HomeButtons({ exclude }: HomeButtonsProps) {
   const items = BUTTONS.filter((b) => !toHide.has(b.key));
 
   return (
-    <div
-      className="fixed top-3 left-1/2 -translate-x-1/2 z-50 flex flex-wrap items-center gap-2"
-      aria-label="Quick navigation"
-    >
+<div
+  className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex space-x-2 md:top-3 md:bottom-auto"
+  aria-label="Quick navigation"
+>
+
       {items.map((b) => (
         <Link
           key={b.key}

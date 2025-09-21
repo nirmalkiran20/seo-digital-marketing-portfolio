@@ -19,20 +19,20 @@ const cardVariants = {
 
 export default function ProjectsPage() {
   const presentations = [
-  { title: 'Micro Influencers', image: '/team.png', link: '/projects/presentations/seo-strategy-2025' },
-  { title: 'B2B Paid Ads', image: '/team1.png', link: '/projects/presentations/google-ads-masterclass' },
+  { title: 'Micro Influencers', image: '/team.png', link: '/projects/presentations/micro-influencers' },
+  { title: 'B2B Paid Ads', image: '/team1.png', link: '/projects/presentations/google-paid-ads' },
   { title: 'Real-Time Analytics', image: '/team2.png', link: '/projects/presentations/analytics-dashboard' },
 ];
 
   const videos = [
-  { title: 'Customer Acquisition Strategies', image: '/team3.png', link: '/projects/videos/podcast-growth-marketing' },
-  { title: 'Strategies for Meaningful Customer Connections', image: '/team4.png', link: '/projects/videos/future-seo-interview' },
+  { title: 'Customer Acquisition Strategies', image: '/team3.png', link: '/projects/videos/customer-acquisition' },
+  { title: 'Strategies for Meaningful Customer Connections', image: '/team4.png', link: '/projects/videos/customers-success' },
 ];
 
   const otherProjects = [
-  { title: 'E-commerce SEO Audit', image: '/team5.png', link: '/projects/others/ecommerce-seo-audit' },
-  { title: 'Ad Campaign Optimization', image: '/team6.png', link: '/projects/others/ad-campaign-optimization' },
-  { title: 'Content Strategy Roadmap', image: '/team7.png', link: '/projects/others/content-strategy-roadmap' },
+  { title: 'Beyond The AB Testing', image: '/team5.png', link: '/projects/others/ab-testing' },
+  { title: 'In-House vs. Agency', image: '/team6.png', link: '/projects/others/in-house-vs-agency' },
+  { title: 'The Future of ABM', image: '/team7.png', link: '/projects/others/future-of-abm' },
 ];
 
   return (
