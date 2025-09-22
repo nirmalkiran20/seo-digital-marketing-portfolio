@@ -49,6 +49,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             alt="Home" 
             width={16} 
             height={16} 
+            unoptimized
           />
         </Link>
       </div>

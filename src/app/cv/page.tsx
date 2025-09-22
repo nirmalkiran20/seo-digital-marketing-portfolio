@@ -30,6 +30,7 @@ export default function CVPage() {
             alt="Home" 
             width={16} 
             height={16} 
+            unoptimized
           />
         </Link>
       </div>

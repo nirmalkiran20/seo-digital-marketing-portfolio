@@ -53,6 +53,7 @@ export default function ProjectsPage() {
       alt="Home" 
       width={25} 
       height={16} 
+      unoptimized
     />
   </Link>
 </div>

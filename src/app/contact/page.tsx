@@ -36,6 +36,7 @@ export default function ContactPage() {
             alt="Home" 
             width={25} 
             height={16} 
+            unoptimized
           />
         </Link>
       </div>

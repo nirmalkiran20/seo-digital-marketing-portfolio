@@ -15,9 +15,14 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+};
+
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "SEO Digital Marketing Portfolio",
+  title: "Kiran Nirmal - Digital Marketing Specialist",
+  description: "9+ Years of Experience in SEO, SEM, SMM, Google Ads, GA4, Looker Studio",
   keywords: [
     "Kiran", 
     "Portfolio", 

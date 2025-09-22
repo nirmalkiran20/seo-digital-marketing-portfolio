@@ -38,6 +38,7 @@ export default function MePage() {
       alt="Home" 
       width={25} 
       height={16} 
+      unoptimized
     />
   </Link>
 </div>

@@ -102,7 +102,8 @@ export default function SkillsPage() {
       src="/home.gif" 
       alt="Home" 
       width={25} 
-      height={16} 
+      height={16}
+      unoptimized 
     />
   </Link>
 </div>

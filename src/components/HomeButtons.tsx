@@ -60,8 +60,9 @@ export default function HomeButtons({ exclude }: HomeButtonsProps) {
           key={b.key}
           href={b.href}
           className="inline-flex items-center gap-2 rounded-full border border-neutral-200/70 dark:border-white/15 
-                     bg-white/70 dark:bg-neutral-900/60 px-2 py-1 text-sm font-medium text-neutral-700 dark:text-neutral-100 
-                     shadow-sm backdrop-blur-md hover:bg-white/90 dark:hover:bg-neutral-900/80 transition"
+           bg-white/70 dark:bg-neutral-900/60 px-1.5 py-0.5 text-xs sm:px-2 sm:py-1 sm:text-sm 
+           font-medium text-neutral-700 dark:text-neutral-100 shadow-sm backdrop-blur-md 
+           hover:bg-white/90 dark:hover:bg-neutral-900/80 transition"
         >
           {b.icon}
           {b.label}

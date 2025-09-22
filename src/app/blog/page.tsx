@@ -35,6 +35,7 @@ export default function BlogPage() {
       alt="Home" 
       width={25} 
       height={16} 
+      unoptimized
     />
   </Link>
 </div>    

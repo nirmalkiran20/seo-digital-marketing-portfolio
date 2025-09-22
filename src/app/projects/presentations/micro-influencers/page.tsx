@@ -10,24 +10,24 @@ export default function SEOProjectPage() {
     <div className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16">
       <FluidCursor />
 
-         {/* Back Navigation Home */}
-      <div className="fixed top-3 left-3 z-50">
+ {/* Back Navigation Home */}
+      <div className="fixed top-3 right-3 z-50">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
+          className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
                     text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
         >
           <ArrowLeft size={16} />
-          <Image src="/home.gif" alt="Home" width={16} height={16} />
+          <Image src="/home.gif" alt="Home" width={16} height={16} unoptimized />
         </Link>
       </div>
 
       {/* Back button */}
-            <div className="fixed top-3 left-19 z-50">
+            <div className="fixed top-3 left-3 z-50">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 rounded-full border
+                className="inline-flex items-center gap-1 rounded-full border
                  bg-white/30 px-2 py-1 text-xs font-medium
                   text-black shadow-md backdrop-blur-lg transition
                    hover:bg-white/60 dark:border-white dark:text-white
