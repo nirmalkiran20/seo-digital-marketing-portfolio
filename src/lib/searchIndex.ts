@@ -23,10 +23,24 @@ function staticPages(): SearchItem[] {
 
 function projects(): SearchItem[] {
   return [
-    { id: 'proj:ecom-seo', title: 'E-commerce SEO Campaign', path: '/projects', type: 'Project', category: 'SEO',
-      excerpt: '150% organic traffic growth via technical SEO, keyword strategy, and content' },
-    { id: 'proj:ads-perf', title: 'Google Ads Performance Campaign', path: '/projects', type: 'Project', category: 'Paid Media',
-      excerpt: '45% lower CPA and higher ROAS through optimization and landing page testing' },
+    { id: 'proj:google-paid-ads', title: 'Google Ads Performance Campaign', path: '/projects/presentations/google-paid-ads', type: 'Project', category: 'Paid Ads',
+      excerpt: 'Reduced CPA by 45%, improved ROAS, landing page testing', tags: ['ads','pmax','google'] },
+    { id: 'proj:micro-influencers', title: 'Micro Influencers', path: '/projects/presentations/micro-influencers', type: 'Project', category: 'Digital Marketing',
+      excerpt: 'How niche voices drive trust, engagement, and qualified leads', tags: ['influencers','b2b'] },
+    { id: 'proj:analytics-dashboard', title: 'Analytics Dashboard', path: '/projects/presentations/analytics-dashboard', type: 'Project', category: 'Analytics',
+      excerpt: 'Real-time dashboards and tracking implementations', tags: ['analytics','ga4'] },
+    { id: 'proj:data-thresholds', title: 'Data Thresholds in GA4', path: '/projects/videos/data-thresholds', type: 'Project', category: 'Video Marketing',
+      excerpt: 'Video campaign exploring GA4 thresholds', tags: ['ga4','video'] },
+    { id: 'proj:data-layer', title: 'Data Layer in GTM', path: '/projects/videos/data-layer', type: 'Project', category: 'Video Marketing',
+      excerpt: 'Implementing scalable GTM data layers', tags: ['gtm','tracking'] },
+    { id: 'proj:element-visibility', title: 'Element Visibility in GTM', path: '/projects/videos/element-visibility', type: 'Project', category: 'Video Marketing',
+      excerpt: 'Tracking element visibility events in GTM', tags: ['gtm','events'] },
+    { id: 'proj:ab-testing', title: 'Beyond AB Testing', path: '/projects/others/ab-testing', type: 'Project', category: 'Marketing Strategy',
+      excerpt: 'Advanced testing methodologies for marketing performance', tags: ['ab-test','experiments'] },
+    { id: 'proj:in-house-vs-agency', title: 'In-House vs. Agency', path: '/projects/others/in-house-vs-agency', type: 'Project', category: 'Agency Strategy',
+      excerpt: 'Comparative study between in-house teams and agencies', tags: ['agency','strategy'] },
+    { id: 'proj:future-of-abm', title: 'The Future of ABM', path: '/projects/others/future-of-abm', type: 'Project', category: 'Account-Based Marketing',
+      excerpt: 'Evolving trends and strategies in ABM', tags: ['abm','b2b'] },
   ];
 }
 

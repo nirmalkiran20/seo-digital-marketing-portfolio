@@ -87,84 +87,67 @@ const staticPages: BaseItem[] = [
 
 const projects: BaseItem[] = [
   {
-    title: 'WebSite Audit',
-    path: '/projects',
-    type: 'Project',
-    category: 'SEO',
-    content:
-      'Increased organic traffic by 50%, technical SEO, content optimization with detailed audit.',
-  },
-  {
     title: 'Google Ads Performance Campaign',
     path: '/projects/presentations/google-paid-ads',
     type: 'Project',
     category: 'Paid Ads',
-    content:
-      'Reduced CPA by 45%, improved ROAS, landing page A/B testing.',
+    content: 'Reduced CPA by 45%, improved ROAS, landing page A/B testing.',
   },
   {
     title: 'Micro Influencers',
     path: '/projects/presentations/micro-influencers',
     type: 'Project',
     category: 'Digital Marketing',
-    content:
-      'How niche voices drive trust, engagement, and qualified leads in modern B2B marketing.',
+    content: 'How niche voices drive trust, engagement, and qualified leads in modern B2B marketing.',
   },
   {
-    title: 'B2B Paid Ads',
-    path: '/projects/presentations/b2b-paid-ads',
-    type: 'Project',
-    category: 'Paid Advertising',
-    content:
-      'Targeted ads strategy for B2B lead generation and conversion optimization.',
-  },
-  {
-    title: 'Real-Time Analytics',
-    path: '/projects/presentations/real-time-analytics',
+    title: 'Analytics Dashboard',
+    path: '/projects/presentations/analytics-dashboard',
     type: 'Project',
     category: 'Analytics',
-    content:
-      'Dashboard and tracking implementations for real-time marketing insights.',
+    content: 'Dashboard and tracking implementations for real-time marketing insights.',
   },
   {
-    title: 'Customer Acquisition Strategies',
+    title: 'Data Thresholds in GA4',
     path: '/projects/videos/data-thresholds',
     type: 'Project',
     category: 'Video Marketing',
-    content:
-      'Video campaigns showcasing proven tactics to attract, engage, and convert high-value clients.',
+    content: 'Video campaigns showcasing proven tactics to attract, engage, and convert high-value clients.',
   },
   {
-    title: 'Strategies for Meaningful Customer Connections',
-    path: '/projects/videos/meaningful-customer-connections',
+    title: 'Data Layer in GTM',
+    path: '/projects/videos/data-layer',
     type: 'Project',
     category: 'Video Marketing',
-    content:
-      'Creating customer-centric video content for better engagement and loyalty.',
+    content: 'Implementing scalable GTM data layers for advanced tracking.',
   },
   {
-    title: 'The AB Testing',
-    path: '/projects/other/beyond-the-ab-testing',
+    title: 'Element Visibility in GTM',
+    path: '/projects/videos/element-visibility',
+    type: 'Project',
+    category: 'Video Marketing',
+    content: 'Tracking element visibility events for better engagement analysis.',
+  },
+  {
+    title: 'Beyond AB Testing',
+    path: '/projects/others/ab-testing',
     type: 'Project',
     category: 'Marketing Strategy',
-    content:
-      'Advanced testing methodologies to drive marketing performance improvements.',
+    content: 'Advanced testing methodologies to drive marketing performance improvements.',
   },
   {
     title: 'In-House vs. Agency',
-    path: '/projects/other/in-house-vs-agency',
+    path: '/projects/others/in-house-vs-agency',
     type: 'Project',
     category: 'Agency Strategy',
-    content:
-      'Comparative study on benefits and challenges between in-house teams and agencies.',
+    content: 'Comparative study on benefits and challenges between in-house teams and agencies.',
   },
   {
     title: 'The Future of ABM',
-    path: '/projects/other/the-future-of-abm',
+    path: '/projects/others/future-of-abm',
     type: 'Project',
     category: 'Account-Based Marketing',
-    content:
-      'Insights into the evolving trends and strategies in Account-Based Marketing.',
+    content: 'Insights into the evolving trends and strategies in Account-Based Marketing.',
   },
 ];
 
