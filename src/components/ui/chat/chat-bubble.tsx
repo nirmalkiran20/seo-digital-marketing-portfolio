@@ -1,10 +1,8 @@
-{/*
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
-import { Button, ButtonProps } from "../button";
-import MessageLoading from "./message-loading";
+import { Button, ButtonProps } from "@/components/ui/button";
 
 // ChatBubble
 const chatBubbleVariant = cva(
@@ -125,7 +123,6 @@ const ChatBubbleMessage = React.forwardRef<
     >
       {isLoading ? (
         <div className="flex items-center space-x-2">
-          <MessageLoading />
         </div>
       ) : (
         children
@@ -208,5 +205,5 @@ export {
 	chatBubbleVariant
 };
 
-*/}
+
 
