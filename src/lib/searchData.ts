@@ -88,7 +88,7 @@ const staticPages: BaseItem[] = [
 const projects: BaseItem[] = [
   {
     title: 'WebSite Audit',
-    path: '/projects/web-site-audit',
+    path: '/projects',
     type: 'Project',
     category: 'SEO',
     content:
@@ -96,7 +96,7 @@ const projects: BaseItem[] = [
   },
   {
     title: 'Google Ads Performance Campaign',
-    path: '/projects/google-ads-performance',
+    path: '/projects/presentations/google-paid-ads',
     type: 'Project',
     category: 'Paid Ads',
     content:
@@ -128,7 +128,7 @@ const projects: BaseItem[] = [
   },
   {
     title: 'Customer Acquisition Strategies',
-    path: '/projects/videos/customer-acquisition',
+    path: '/projects/videos/data-thresholds',
     type: 'Project',
     category: 'Video Marketing',
     content:
@@ -143,7 +143,7 @@ const projects: BaseItem[] = [
       'Creating customer-centric video content for better engagement and loyalty.',
   },
   {
-    title: 'Beyond The AB Testing',
+    title: 'The AB Testing',
     path: '/projects/other/beyond-the-ab-testing',
     type: 'Project',
     category: 'Marketing Strategy',

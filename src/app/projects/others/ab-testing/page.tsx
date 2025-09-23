@@ -1,11 +1,11 @@
 'use client';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import FluidCursor from '@/components/FluidCursor';
 
-export default function EcommerceSEOAuditPage() {
+export default function ABTestingPage() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center px-4 py-16">
       <FluidCursor />
@@ -39,7 +39,7 @@ export default function EcommerceSEOAuditPage() {
 
       {/* Heading */}
       <motion.div
-        className="mt-7 mb-7 text-center"
+        className="mt-5 mb-7 text-center"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -49,19 +49,47 @@ export default function EcommerceSEOAuditPage() {
                 rounded-4xl shadow-lg border 
                 bg-white/70 dark:bg-neutral-800/70 
                 backdrop-blur-lg">Beyond The AB Testing</h1>
-        <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-300 max-w-lg mx-auto">
+        <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300 max-w-lg mx-auto">
           A detailed SEO audit performed for an e-commerce platform to improve visibility and conversions.
         </p>
       </motion.div>
 
-      {/* Project Preview using embedded PDF */}
-<motion.iframe
-  src="/AB-Testing.pdf"
-  className="w-full max-w-4xl h-[80vh] rounded-2xl shadow-lg border bg-white/70 dark:bg-neutral-800/70 backdrop-blur-lg"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-/>      
-    </div>
+      {/* Project Preview using vertically scrollable images */}
+<div className="w-full max-w-sm h-[50vh] overflow-y-auto overflow-x-hidden snap-y snap-mandatory flex flex-col gap-4 py-4 px-2 rounded-2xl shadow-lg border bg-white/70 dark:bg-neutral-800/70 backdrop-blur-lg scroll-smooth">
+  {['ABTesting1.png', 'ABTesting2.png'].map((img, index) => (
+    <motion.div
+      key={index}
+      className="flex-shrink-0 w-full h-full snap-start rounded-xl overflow-hidden"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+    >
+      <Image
+        src={`/${img}`}
+        alt={`AB Testing Slide ${index + 1}`}
+        width={1400}
+        height={2000}
+        className="w-full h-full object-contain"
+      />
+    </motion.div>
+  ))}
+</div>
+
+{/* Note + Download Button */}
+<div className="mt-6 text-center z-50">
+  <p className="mb-3 text-sm font-bold text-neutral-600 dark:text-neutral-300">
+    For full insights, you can download the PPT
+  </p>
+  <motion.a
+    href="/AB-Testing.pdf"
+    download
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white text-sm font-medium shadow-md hover:bg-blue-700 transition"
+  >
+    <Download size={16} /> Download PPT
+  </motion.a>
+</div>
+</div>
   );
 }

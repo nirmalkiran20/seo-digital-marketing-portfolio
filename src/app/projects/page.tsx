@@ -25,8 +25,9 @@ export default function ProjectsPage() {
 ];
 
   const videos = [
-  { title: 'Customer Acquisition Strategies', image: '/team3.png', link: '/projects/videos/customer-acquisition' },
-  { title: 'Strategies for Meaningful Customer Connections', image: '/team4.png', link: '/projects/videos/customers-success' },
+  { title: 'Data Thresholds in GA4', image: '/team3.png', link: '/projects/videos/data-thresholds' },
+  { title: 'Data Layer in GTM', image: '/team4.png', link: '/projects/videos/data-layer' },
+  { title: 'Element Visibility in GTM', image: '/team8.png', link: '/projects/videos/element-visibility' },
 ];
 
   const otherProjects = [
