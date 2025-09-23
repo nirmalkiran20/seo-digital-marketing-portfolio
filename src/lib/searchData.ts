@@ -35,66 +35,138 @@ const inlineBlogs: BaseItem[] = [
 async function loadIndexOnce() {
   if (loaded) return;
 
-  const staticPages: BaseItem[] = [
-    {
-      title: 'About Me',
-      path: '/me',
-      type: 'Page',
-      category: 'About',
-      content:
-        'Digital Marketing Specialist with SEO, SEM, SMM, Google Ads, GA4, and Looker Studio',
-    },
-    {
-      title: 'Projects',
-      path: '/projects',
-      type: 'Page',
-      category: 'Work',
-      content:
-        'SEO campaigns, Google Ads, optimization, YouTube, and social media marketing',
-    },
-    {
-      title: 'Skills',
-      path: '/skills',
-      type: 'Page',
-      category: 'Expertise',
-      content:
-        'SEO strategy, Google Ads, GA4 analytics, Looker Studio, keyword research, technical SEO, content strategy, SEM',
-    },
-    {
-      title: 'Blog',
-      path: '/blog',
-      type: 'Page',
-      category: 'Articles',
-      content:
-        'Digital marketing insights, SEO case studies, Google Ads tips, and more',
-    },
-    {
-      title: 'Contact',
-      path: '/contact',
-      type: 'Page',
-      category: 'Contact',
-      content: 'Get in touch via email, LinkedIn collaboration.',
-    },
-  ];
+const staticPages: BaseItem[] = [
+  {
+    title: 'About Me',
+    path: '/me',
+    type: 'Page',
+    category: 'About',
+    content:
+      'Digital Marketing Specialist with SEO, SEM, SMM, Google Ads, GA4, and Looker Studio.',
+  },
+  {
+    title: 'Projects',
+    path: '/projects',
+    type: 'Page',
+    category: 'Work',
+    content:
+      'AB Testing, SEO campaigns, Google Ads, optimization, YouTube, and social media marketing.',
+  },
+  {
+    title: 'Skills',
+    path: '/skills',
+    type: 'Page',
+    category: 'Expertise',
+    content:
+      'Content, Google Ads, GA4 analytics, Looker Studio, keyword research, technical SEO, content strategy, SEM.',
+  },
+  {
+    title: 'Blog',
+    path: '/blog',
+    type: 'Page',
+    category: 'Articles',
+    content:
+      'Digital marketing insights, SEO case studies, Google Ads tips, and more.',
+  },
+  {
+    title: 'Contact',
+    path: '/contact',
+    type: 'Page',
+    category: 'Contact',
+    content: 'Get in touch via email, LinkedIn collaboration.',
+  },
+  {
+    title: 'CV',
+    path: '/cv',
+    type: 'Page',
+    category: 'About',
+    content:
+      'Comprehensive CV with 9+ years experience in Digital Marketing, SEO, SEM, SMM, Google Ads, GA4, and Looker Studio. Contains detailed career history, skills, certifications, and accomplishments.',
+  },
+];
 
-  const projects: BaseItem[] = [
-    {
-      title: 'E-commerce Audit',
-      path: '/projects',
-      type: 'Project',
-      category: 'SEO',
-      content:
-        'Increased organic traffic by 50%, technical SEO, optimization',
-    },
-    {
-      title: 'Google Ads Performance Campaign',
-      path: '/projects',
-      type: 'Project',
-      category: 'Paid Ads',
-      content:
-        'Reduced CPA by 45%, improved ROAS, landing page testing',
-    },
-  ];
+const projects: BaseItem[] = [
+  {
+    title: 'WebSite Audit',
+    path: '/projects/web-site-audit',
+    type: 'Project',
+    category: 'SEO',
+    content:
+      'Increased organic traffic by 50%, technical SEO, content optimization with detailed audit.',
+  },
+  {
+    title: 'Google Ads Performance Campaign',
+    path: '/projects/google-ads-performance',
+    type: 'Project',
+    category: 'Paid Ads',
+    content:
+      'Reduced CPA by 45%, improved ROAS, landing page A/B testing.',
+  },
+  {
+    title: 'Micro Influencers',
+    path: '/projects/presentations/micro-influencers',
+    type: 'Project',
+    category: 'Digital Marketing',
+    content:
+      'How niche voices drive trust, engagement, and qualified leads in modern B2B marketing.',
+  },
+  {
+    title: 'B2B Paid Ads',
+    path: '/projects/presentations/b2b-paid-ads',
+    type: 'Project',
+    category: 'Paid Advertising',
+    content:
+      'Targeted ads strategy for B2B lead generation and conversion optimization.',
+  },
+  {
+    title: 'Real-Time Analytics',
+    path: '/projects/presentations/real-time-analytics',
+    type: 'Project',
+    category: 'Analytics',
+    content:
+      'Dashboard and tracking implementations for real-time marketing insights.',
+  },
+  {
+    title: 'Customer Acquisition Strategies',
+    path: '/projects/videos/customer-acquisition',
+    type: 'Project',
+    category: 'Video Marketing',
+    content:
+      'Video campaigns showcasing proven tactics to attract, engage, and convert high-value clients.',
+  },
+  {
+    title: 'Strategies for Meaningful Customer Connections',
+    path: '/projects/videos/meaningful-customer-connections',
+    type: 'Project',
+    category: 'Video Marketing',
+    content:
+      'Creating customer-centric video content for better engagement and loyalty.',
+  },
+  {
+    title: 'Beyond The AB Testing',
+    path: '/projects/other/beyond-the-ab-testing',
+    type: 'Project',
+    category: 'Marketing Strategy',
+    content:
+      'Advanced testing methodologies to drive marketing performance improvements.',
+  },
+  {
+    title: 'In-House vs. Agency',
+    path: '/projects/other/in-house-vs-agency',
+    type: 'Project',
+    category: 'Agency Strategy',
+    content:
+      'Comparative study on benefits and challenges between in-house teams and agencies.',
+  },
+  {
+    title: 'The Future of ABM',
+    path: '/projects/other/the-future-of-abm',
+    type: 'Project',
+    category: 'Account-Based Marketing',
+    content:
+      'Insights into the evolving trends and strategies in Account-Based Marketing.',
+  },
+];
 
   const dataset = [...staticPages, ...projects, ...inlineBlogs];
 

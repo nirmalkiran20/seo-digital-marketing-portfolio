@@ -21,15 +21,15 @@ export default function CVPage() {
       <div className="fixed top-3 left-3 z-50">
         <Link 
           href="/"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
-                    text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+          className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
+                    text-sm font-medium text-black shadow-md backdrop-blur-lg transition 
                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
         ><ArrowLeft size={16} />
         <Image 
             src="/home.gif" 
             alt="Home" 
-            width={16} 
-            height={16} 
+            width={18} 
+            height={18} 
             unoptimized
           />
         </Link>
@@ -43,10 +43,10 @@ export default function CVPage() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-3 py-1
-                     text-xs font-medium text-black shadow-md backdrop-blur-lg transition
+                     text-sm font-medium text-black shadow-md backdrop-blur-lg transition
                      hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
         >
-          <Download size={16} /> Download
+          <Download size={18} /> Download
         </motion.a>
       </div>
 
@@ -82,26 +82,7 @@ export default function CVPage() {
       />
     </motion.div>
   ))}
-</div>
-
-      {/* Download CV Button (Bottom) */}
-      <motion.div
-        className="mt-4 relative z-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        <motion.a
-          href="/CV_2025.pdf"
-          download
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-4 py-2.5 
-                     text-white font-medium shadow-md transition hover:bg-blue-700"
-        >
-          <Download size={18} /> Download CV
-        </motion.a>
-      </motion.div>
+</div>      
     </div>
   );
 }

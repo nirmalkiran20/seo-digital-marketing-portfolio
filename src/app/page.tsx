@@ -129,7 +129,7 @@ export default function Home() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
           </span>
-          Available for opportunities
+          Open to opportunities
         </div>
       </div>
 
@@ -237,7 +237,7 @@ export default function Home() {
       </motion.div>
 
 {/* PORTRAIT — now below the search, with lower stacking */}
-<div className="relative z-10 mt-2 h-52 w-48 overflow-hidden sm:h-72 sm:w-72">
+<div className="relative z-10 mt-2 h-52 w-48 overflow-hidde sm:h-72 sm:w-72">
   <video
     src="/myvideo1.webm"
     autoPlay
