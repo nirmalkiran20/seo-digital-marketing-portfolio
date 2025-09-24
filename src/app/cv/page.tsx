@@ -1,5 +1,6 @@
 'use client';
 
+import { event } from '@/lib/gtag';
 import Image from 'next/image';
 import { ArrowLeft, Download } from 'lucide-react';
 import Link from 'next/link';
@@ -38,16 +39,22 @@ export default function CVPage() {
       {/* Download CV Button (Top Right) */}
       <div className="fixed top-3 right-3 z-50">
         <motion.a
-          href="/CV_2025.pdf"
-          download
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-3 py-1
-                     text-sm font-medium text-black shadow-md backdrop-blur-lg transition
-                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-        >
-          <Download size={18} /> Download
-        </motion.a>
+  href="/CV_2025.pdf"
+  download
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.97 }}
+  className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-3 py-1
+             text-sm font-medium text-black shadow-md backdrop-blur-lg transition
+             hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+  onClick={() => {
+    event("download", {
+      file_name: "CV_2025.pdf",
+      page_location: window.location.pathname,
+    });
+  }}
+>
+  <Download size={18} /> Download
+</motion.a>
       </div>
 
       {/* Heading */}

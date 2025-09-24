@@ -1,4 +1,7 @@
-import { Analytics } from "@vercel/analytics/react"
+import { event } from '@/lib/gtag';
+import { useEffect } from 'react';
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
+import Analytics from '@/components/Analytics';  
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -6,7 +9,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import HomeButtons from '@/components/HomeButtons';
-
 
 
 // Load Inter font for non-Apple devices
@@ -96,9 +98,8 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
           <Toaster />
         </ThemeProvider>
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
 }
-
-
