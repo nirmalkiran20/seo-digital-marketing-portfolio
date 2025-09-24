@@ -2,18 +2,17 @@
 
 import Script from 'next/script';
 import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { GA_MEASUREMENT_ID, pageview, event } from '@/lib/gtag';
 
 export default function Analytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   // Track pageviews
   useEffect(() => {
-    const url = window.location.pathname + window.location.search;
+    const url = window.location.pathname;
     pageview(url);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   // Track scroll 50%
   useEffect(() => {
@@ -22,36 +21,34 @@ export default function Analytics() {
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
       if (scrollPercent > 50) {
-        event("scroll_50_percent", { page_path: window.location.pathname });
-        window.removeEventListener("scroll", handleScroll);
+        event('scroll_50_percent', { page_path: window.location.pathname });
+        window.removeEventListener('scroll', handleScroll);
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Track all button and link clicks
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
+      if (!target.closest('button') && !target.closest('a')) return;
 
-      if (!target.closest("button") && !target.closest("a")) return;
-
-      const el = target.closest("button, a") as HTMLElement;
+      const el = target.closest('button, a') as HTMLElement;
       if (!el) return;
 
-      const label = el.innerText || el.getAttribute("aria-label") || el.id || "unknown";
+      const label =
+        el.innerText || el.getAttribute('aria-label') || el.id || 'unknown';
 
-      event("button_click", {
+      event('button_click', {
         button_text: label,
         page_path: window.location.pathname,
         tag_name: el.tagName,
       });
     };
-
-    window.addEventListener("click", handleClick);
-    return () => window.removeEventListener("click", handleClick);
+    window.addEventListener('click', handleClick);
+    return () => window.removeEventListener('click', handleClick);
   }, []);
 
   if (!GA_MEASUREMENT_ID) return null;
