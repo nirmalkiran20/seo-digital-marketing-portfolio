@@ -46,8 +46,7 @@ export default function CVPage() {
   className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-3 py-1
              text-sm font-medium text-black shadow-md backdrop-blur-lg transition
              hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-  onClick={() => {
-    event("download", {
+  onClick={() => {event("download", {
       file_name: "CV_2025.pdf",
       page_location: window.location.pathname,
     });

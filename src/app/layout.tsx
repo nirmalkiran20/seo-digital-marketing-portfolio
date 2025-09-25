@@ -1,7 +1,5 @@
-import { event } from '@/lib/gtag';
-import { useEffect } from 'react';
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import Analytics from '@/components/Analytics';  
+import Analytics from '@/components/Analytics'; // Your GA4 component
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -9,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import HomeButtons from '@/components/HomeButtons';
-
 
 // Load Inter font for non-Apple devices
 const inter = Inter({ 
@@ -68,37 +65,28 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({children,}: Readonly<{ children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="icon" href="/favicon.svg" sizes="any" />
-      </head>
-      <body
+      <body 
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           inter.variable,
-          
         )}
-        
-      >
+        suppressHydrationWarning
+        >
+        <Analytics /> {/* GA4 Analytics component */}
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
-        >
-          {/* Top-center quick buttons on all non-home pages.
-- HomeButtons hides itself on "/" and hides the current page + Home elsewhere */}
-<HomeButtons />
-          <main className="flex min-h-screen flex-col">
-            {children}
-          </main>
-          <Toaster />
+          disableTransitionOnChange
+        >          
+          <HomeButtons />
+          {children}
+          <Toaster />          
         </ThemeProvider>
-        <Analytics />
-        <VercelAnalytics />
+        <VercelAnalytics /> {/* Vercel Analytics */}
       </body>
     </html>
   );
