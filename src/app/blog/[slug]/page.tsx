@@ -22,37 +22,32 @@ export default async function ArticlePage({ params }: { params: Params }) {
       {/* Fluid cursor background */}
       <FluidCursor />
 
-      {/* Back button */}
-      <div className="fixed top-3 left-19 z-50">
+{/* Back Navigation Home */}
+      <div className="fixed top-3 right-3 z-50">
         <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 rounded-full border
-           bg-white/30 px-2 py-1 text-xs font-medium
-            text-black shadow-md backdrop-blur-lg transition
-             hover:bg-white/60 dark:border-white dark:text-white
-              dark:hover:bg-neutral-800"
+          href="/"
+          className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
+                    text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+                    hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
         >
-          <ArrowLeft size={16} /> Blog
+          <ArrowLeft size={16} />
+          <Image src="/home.gif" alt="Home" width={16} height={16} unoptimized />
         </Link>
       </div>
 
-      {/* Back Navigation */}
-      <div className="fixed top-3 left-3 z-50">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-2 py-1 
-                    text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
-                    hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-        ><ArrowLeft size={16} />
-        <Image 
-            src="/home.gif" 
-            alt="Home" 
-            width={16} 
-            height={16} 
-            unoptimized
-          />
-        </Link>
-      </div>
+      {/* Back button */}
+            <div className="fixed top-3 left-3 z-50">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-1 rounded-full border
+                 bg-white/30 px-2 py-1 text-xs font-medium
+                  text-black shadow-md backdrop-blur-lg transition
+                   hover:bg-white/60 dark:border-white dark:text-white
+                    dark:hover:bg-neutral-800"
+              >
+                <ArrowLeft size={16} /> Blog
+              </Link>
+            </div>
 
       {/* Header with motion */}
       <MotionDiv

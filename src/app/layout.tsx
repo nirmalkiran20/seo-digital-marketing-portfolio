@@ -1,5 +1,6 @@
+// src/app/layout.tsx
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import Analytics from '@/components/Analytics'; // Your GA4 component
+import { GTMProvider } from '@/components/GoogleTagManager'; // New GTM component
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -73,20 +74,22 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
           "min-h-screen bg-background font-sans antialiased",
           inter.variable,
         )}
-        suppressHydrationWarning
-        >
-        <Analytics /> {/* GA4 Analytics component */}
+      >
+        {/* GTM Provider - loads on all pages */}
+        <GTMProvider />
+        
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
-        >          
+        >
           <HomeButtons />
           {children}
-          <Toaster />          
+          <Toaster />
         </ThemeProvider>
-        <VercelAnalytics /> {/* Vercel Analytics */}
+        
+        <VercelAnalytics />
       </body>
     </html>
   );

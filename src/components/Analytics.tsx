@@ -1,4 +1,4 @@
-'use client';
+{/*'use client';
 
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
@@ -175,3 +175,4 @@ function debounce(func: Function, wait: number) {
     timeout = setTimeout(later, wait);
   };
 }
+*/}

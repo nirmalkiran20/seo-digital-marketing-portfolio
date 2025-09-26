@@ -28,8 +28,9 @@ export default async function CategoryPage({ params }: { params: Params }) {
   const posts = getPostsByCategory(pretty);
 
   return (
+    
     <div className="relative flex min-h-screen flex-col px-4 pb-16 pt-24">
-      <div className="mb-6">
+     <div className="mb-6">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
@@ -86,7 +87,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
                 </p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-2 text-white hover:text-black transition-colors font-medium text-sm"
                 >
                   Read Article <ArrowRight size={14} />
                 </Link>
@@ -96,6 +97,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
         </div>
       )}
     </div>
+    
   );
 }
 
