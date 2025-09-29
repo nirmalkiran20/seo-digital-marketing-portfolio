@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag } from 'lucide-react';
 import { getAllCategories, getPostsByCategory } from '@/lib/markdown';
+import FluidCursor from '@/components/FluidCursor';
 
 type Params = Promise<{ category: string }>;
 
@@ -28,9 +29,11 @@ export default async function CategoryPage({ params }: { params: Params }) {
   const posts = getPostsByCategory(pretty);
 
   return (
-    
     <div className="relative flex min-h-screen flex-col px-4 pb-16 pt-24">
-     <div className="mb-6">
+      <FluidCursor />
+      
+      {/* All Articles button moved to top left with absolute positioning */}
+      <div className="fixed top-3 left-3 z-10">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
@@ -46,7 +49,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
           {pretty}
         </h1>
         <p className="mt-2 text-neutral-600 dark:text-neutral-300">
-          Articles categorized under “{pretty}”.
+          Articles categorized under "{pretty}".
         </p>
       </div>
 
@@ -97,8 +100,5 @@ export default async function CategoryPage({ params }: { params: Params }) {
         </div>
       )}
     </div>
-    
   );
 }
-
-

@@ -1,7 +1,7 @@
 ---
 title: "Landing Page Psychology: 5 Cognitive Biases That Boost Conversions"
 category: "CRO"
-date: "2024-12-28"
+date: "2025-02-02"
 readTime: "11 min read"
 author: "Kiran Nirmal"
 authorBio: "Digital Marketing Specialist with 9.7+ years in SEO, SEM, SMM, and Analytics."
@@ -26,7 +26,7 @@ Anchoring occurs when people rely heavily on the first piece of information they
 - Show a higher “original price” before displaying the discounted price.  
 - Use tiered pricing (Basic, Pro, Premium) so customers compare relative value.  
 
-👉 Example: If you’re running ads through [Google Ads Performance Max](./blog/google-ads-performance-max-guide), direct users to a page where the premium plan is shown first. This frames their decision-making.
+👉 Example: If you’re running ads through [Google Ads Performance Max](./google-ads-performance-max-guide), direct users to a page where the premium plan is shown first. This frames their decision-making.
 
 ---
 
@@ -36,7 +36,7 @@ People trust what others say more than what brands say.
 
 **How to use it:**  
 - Add customer testimonials, star ratings, and case studies.  
-- Highlight user-generated content from platforms where you track [Social Media ROI](./blog/social-media-roi-2025).  
+- Highlight user-generated content from platforms where you track [Social Media ROI](./social-media-roi-2025).  
 
 When visitors see others succeeding, they’re more likely to take action.
 
@@ -51,7 +51,7 @@ Scarcity makes people value things more when they appear limited.
 - Countdown timers for discounts.  
 - Seasonal or limited-edition product tags.  
 
-Scarcity works especially well when paired with **AI-driven personalized messaging** from [The Future of SEO](./blog/future-of-seo-ai-driven-content).
+Scarcity works especially well when paired with **AI-driven personalized messaging** from [The Future of SEO](./future-of-seo-ai-driven-content).
 
 ---
 
@@ -77,7 +77,7 @@ People are more likely to follow recommendations from experts or authority figur
 - Add statistics from trusted industry sources.  
 - Include influencer partnerships.  
 
-For example, linking your product demo to GA insights from [GA4 Attribution Models](./blog/ga4-attribution-models-explained) shows credibility through data-backed decision-making.
+For example, linking your product demo to GA insights from [GA4 Attribution Models](./ga4-attribution-models-explained) shows credibility through data-backed decision-making.
 
 ---
 

@@ -23,9 +23,9 @@ But here’s the catch: not all attribution models tell the same story. Choosing
 Attribution answers the question: **Which marketing touchpoints contributed to a conversion?**  
 
 For example:  
-- Did a user first see a [social media ad](./blog/social-media-roi-2025) but convert after clicking an email?  
+- Did a user first see a [social media ad](./social-media-roi-2025) but convert after clicking an email?  
 - Did an organic search visit (influenced by [AI-driven SEO](./blog/future-of-seo-ai-driven-content)) drive the final purchase?  
-- Or was it a [Google Ads Performance Max](./blog/google-ads-performance-max-guide) campaign that sealed the deal?  
+- Or was it a [Google Ads Performance Max](./google-ads-performance-max-guide) campaign that sealed the deal?  
 
 GA4 helps answer these questions by offering different attribution models.
 

@@ -25,14 +25,14 @@ AI allows marketers to:
 - Generate topic clusters faster.  
 - Optimize content in real time.  
 
-Just like tracking [Social Media ROI](./blog/social-media-roi-2025), modern SEO requires focusing on outcomes, not just surface-level metrics.
+Just like tracking [Social Media ROI](./social-media-roi-2025), modern SEO requires focusing on outcomes, not just surface-level metrics.
 
 ---
 
 ## Key AI-Driven SEO Strategies
 
 ### 1. Intent-Based Keyword Clustering
-AI tools now group keywords by **search intent** (informational, navigational, transactional). Optimizing for intent ensures your landing pages match what users actually want—especially when paired with [psychology-based landing page design](./blog/cro-landing-page-psychology).
+AI tools now group keywords by **search intent** (informational, navigational, transactional). Optimizing for intent ensures your landing pages match what users actually want—especially when paired with [psychology-based landing page design](./cro-landing-page-psychology).
 
 ### 2. Automated Content Briefs
 Instead of manually researching competitors, AI generates briefs with:  
@@ -45,7 +45,7 @@ This speeds up production while ensuring coverage of what Google considers “he
 AI can forecast which topics will trend next month or next quarter, giving you a **first-mover advantage**. For example, e-commerce sites using predictive SEO can prepare seasonal guides ahead of competitors.
 
 ### 4. Personalized Search Experiences
-With Google’s AI systems tailoring results per user, content must be **dynamic**. Personalized CTAs and AI-driven copywriting increase engagement—similar to dynamic targeting in [Google Ads Performance Max](./blog/google-ads-performance-max-guide).
+With Google’s AI systems tailoring results per user, content must be **dynamic**. Personalized CTAs and AI-driven copywriting increase engagement—similar to dynamic targeting in [Google Ads Performance Max](./google-ads-performance-max-guide).
 
 ### 5. Voice & Multimodal Search
 With AI assistants and visual search gaining traction, optimizing for **voice commands, images, and video snippets** is essential. AI tools now suggest schema markup automatically to improve discoverability.
@@ -66,7 +66,7 @@ This is where **human creativity** meets **AI scalability**. Success comes from 
 
 - **Use AI for research, not for replacement** – Let humans bring originality.  
 - **Double down on E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)** – Google values credibility more than ever.  
-- **Integrate AI with analytics** – Pair GA4 data from [Attribution Models](./blog/ga4-attribution-models-explained) to understand how organic traffic contributes to conversions.  
+- **Integrate AI with analytics** – Pair GA4 data from [Attribution Models](./ga4-attribution-models-explained) to understand how organic traffic contributes to conversions.  
 - **Prioritize content design** – Structure content for skimmability, visual appeal, and user trust.  
 
 ---

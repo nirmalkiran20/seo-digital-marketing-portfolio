@@ -20,7 +20,7 @@ In 2025, social media marketing is no longer about vanity metrics like *likes* a
 
 ## Why ROI on Social Media Is Tricky
 
-Unlike direct-response channels such as [Google Ads Performance Max](./blog/google-ads-performance-max-guide), social media generates both tangible and intangible benefits.  
+Unlike direct-response channels such as [Google Ads Performance Max](./google-ads-performance-max-guide), social media generates both tangible and intangible benefits.  
 - **Tangible outcomes**: conversions, leads, purchases.  
 - **Intangible outcomes**: brand awareness, audience trust, customer loyalty.  
 
@@ -39,10 +39,10 @@ How much are you spending on ads, content creation, and management compared to h
 Social isn’t just about the first sale. Platforms like Instagram Shops and TikTok’s integrated e-commerce make it easier to track how long a social customer stays with you.
 
 ### 3. Conversion Rate by Platform
-A landing page designed with [psychology-based conversion principles](./blog/cro-landing-page-psychology) often performs differently depending on the traffic source. Measuring per-platform conversion rates is essential.
+A landing page designed with [psychology-based conversion principles](./cro-landing-page-psychology) often performs differently depending on the traffic source. Measuring per-platform conversion rates is essential.
 
 ### 4. Multi-Touch Attribution
-Relying only on “last-click” attribution undervalues social. Tools like [GA4 Attribution Models](./blog/ga4-attribution-models-explained) show how social assists conversions at different journey stages.
+Relying only on “last-click” attribution undervalues social. Tools like [GA4 Attribution Models](./ga4-attribution-models-explained) show how social assists conversions at different journey stages.
 
 ---
 
@@ -50,7 +50,7 @@ Relying only on “last-click” attribution undervalues social. Tools like [GA4
 
 With AI-driven analytics, businesses can finally link social engagement to **business revenue**. Predictive models powered by machine learning show how engagement today impacts revenue months later.
 
-For example, pairing **AI content strategies** from [The Future of SEO](./blog/future-of-seo-ai-driven-content) with AI-powered social scheduling allows consistent, ROI-driven content delivery.
+For example, pairing **AI content strategies** from [The Future of SEO](./future-of-seo-ai-driven-content) with AI-powered social scheduling allows consistent, ROI-driven content delivery.
 
 ---
 

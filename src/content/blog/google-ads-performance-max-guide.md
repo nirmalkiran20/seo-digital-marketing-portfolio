@@ -25,7 +25,7 @@ Unlike standard campaigns, PMax uses Google’s AI to decide:
 - Which audiences to target.  
 - Which creative assets perform best.  
 
-That means less manual control—but more room for strategy. Understanding **attribution insights from GA4** [Attribution Models](./blog/ga4-attribution-models-explained) is critical to see how PMax interacts with other channels.
+That means less manual control—but more room for strategy. Understanding **attribution insights from GA4** [Attribution Models](./ga4-attribution-models-explained) is critical to see how PMax interacts with other channels.
 
 ---
 
@@ -47,7 +47,7 @@ AI is only as good as the data you provide.
 - Use **high-quality creative assets**—images, videos, headlines.  
 - Provide structured product feeds for e-commerce.  
 
-Think of it like [AI-driven SEO strategies](./blog/future-of-seo-ai-driven-content): input quality determines output quality.
+Think of it like [AI-driven SEO strategies](./future-of-seo-ai-driven-content): input quality determines output quality.
 
 ---
 
@@ -56,7 +56,7 @@ Think of it like [AI-driven SEO strategies](./blog/future-of-seo-ai-driven-conte
 Performance Max lets you create asset groups that function like mini-campaigns.  
 - Group by product category or service type.  
 - Test multiple ad creatives to see which perform best.  
-- Use strong CTAs based on [landing page psychology](./blog/cro-landing-page-psychology).  
+- Use strong CTAs based on [landing page psychology](./cro-landing-page-psychology).  
 
 Well-structured asset groups make AI smarter.
 
@@ -66,7 +66,7 @@ Well-structured asset groups make AI smarter.
 
 While Google’s AI finds audiences automatically, adding **audience signals** speeds up learning.  
 - Include demographics, in-market segments, and remarketing lists.  
-- Layer signals with insights from your [social media ROI analysis](./blog/social-media-roi-2025).  
+- Layer signals with insights from your [social media ROI analysis](./social-media-roi-2025).  
 
 Audience signals don’t limit targeting—they guide it.
 
