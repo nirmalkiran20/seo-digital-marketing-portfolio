@@ -71,6 +71,7 @@ export default function CVPage() {
       <div className="fixed top-3 left-3 z-50">
         <Link 
           href="/"
+          data-gtm="nav-back-home"
           onClick={handleBackNavigation}
           className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
                     text-sm font-medium text-black shadow-md backdrop-blur-lg transition 

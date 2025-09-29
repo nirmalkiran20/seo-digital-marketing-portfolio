@@ -26,6 +26,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
       <div className="fixed top-3 right-3 z-50">
         <Link
           href="/"
+          data-gtm="nav-back-home"
           className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
                     text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
                     hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
