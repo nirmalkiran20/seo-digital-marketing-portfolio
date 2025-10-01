@@ -21,26 +21,22 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kiran Nirmal - Digital Marketing Specialist",
+  metadataBase: new URL("https://seo-digital-marketing-portfolio.vercel.app"),
+  title: "I am a Digital Marketing Specialist ",
   description:
-    "9+ Years of Experience in SEO, SEM, SMM, Google Ads, GA4, Looker Studio",
+    "Professional SEO and Digital Marketing Specialist with 9.7+ years experience in SEO, SEM, SMM, Google Ads, GA4, and Looker Studio.",
   keywords: ["Kiran", "Portfolio", "Digital Marketer", "AI", "Interactive", "Memoji", "Website Audit", "SEO"],
   authors: [{ name: "Kiran", url: "https://github.com/nirmalkiran20/" }],
-  creator: "Kiran",
+  creator: "Kiran Nirmal",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "",
+    url: "https://seo-digital-marketing-portfolio.vercel.app/",
     title: "Kiran Portfolio",
-    description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    siteName: "Kiran Portfolio",
+    description: "Interactive portfolio with an Active Search Bar",
+    siteName: "Digital Marketing Portfolio",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kiran Portfolio",
-    description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    creator: "@Kiran",
-  },
+  
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
     shortcut: "/favicon.ico?v=2",

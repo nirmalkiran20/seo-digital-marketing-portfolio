@@ -1,3 +1,4 @@
+{/*
 import Image from 'next/image';
 import { Image as Img } from 'lucide-react';
 import { ChevronRight, Link } from 'lucide-react';
@@ -356,7 +357,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
 
   return (
     <div className="space-y-10">
-      {/* Header section with description */}
+      {/* Header section with description *
       <div className="rounded-3xl bg-[#F5F5F7] p-8 dark:bg-[#1D1D1F]">
         <div className="space-y-6">
           <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
@@ -367,7 +368,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
             {projectData.description}
           </p>
 
-          {/* Tech stack */}
+          {/* Tech stack *
           <div className="pt-4">
             <h3 className="mb-3 text-sm tracking-wide text-neutral-500 uppercase dark:text-neutral-400">
               Technologies
@@ -386,7 +387,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
         </div>
       </div>
 
-      {/* Links section */}
+      {/* Links section *
       {projectData.links && projectData.links.length > 0 && (
         <div className="mb-24">
           <div className="px-6 mb-4 flex items-center gap-2">
@@ -413,7 +414,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
         </div>
       )}
 
-      {/* Images gallery */}
+      {/* Images gallery *
       {projectData.images && projectData.images.length > 0 && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 gap-4">
@@ -495,4 +496,4 @@ export const data = [
   },
 ];
 
-
+*/}

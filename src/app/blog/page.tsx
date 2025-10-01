@@ -1,14 +1,62 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Calendar, Clock, ArrowRight, ArrowLeft, Tag } from 'lucide-react';
-import { getAllPosts, getAllCategories } from '@/lib/markdown';
-import FluidCursor from '@/components/FluidCursor';
+import Link from "next/link";
+import Image from "next/image";
+import { Calendar, Clock, ArrowRight, ArrowLeft, Tag } from "lucide-react";
+import { getAllPosts, getAllCategories } from "@/lib/markdown";
+import FluidCursor from "@/components/FluidCursor";
+import type { Metadata } from "next";
 
+export const dynamic = "force-static";
 
-export const dynamic = 'force-static';
+/* ----------------------------
+   ✅ Generate Metadata (SEO)
+----------------------------- */
+export async function generateMetadata(): Promise<Metadata> {
+  const posts = getAllPosts();
 
+  return {
+    title: "Blog | Digital Marketing Insights",
+    description:
+      "Read expert insights on SEO, Google Ads, Analytics, CRO, and growth strategies. Stay updated with the latest digital marketing articles.",
+    keywords: [
+      "SEO",
+      "Google Ads",
+      "Analytics",
+      "CRO",
+      "Digital Marketing Blog",
+      "Marketing Insights",
+    ],
+    openGraph: {
+      title: "Blog | Digital Marketing Insights",
+      description:
+        "Deep dives into SEO, Google Ads, Analytics, CRO, and growth strategies.",
+      url: "https://seo-digital-marketing-portfolio.vercel.app/blog",
+      type: "website",
+      images: posts.length
+        ? [
+            {
+              url: posts[0].image, // ✅ use first blog image
+              width: 1200,
+              height: 630,
+              alt: posts[0].title,
+            },
+          ]
+        : [
+            {
+              url: "/default-blog-og.png", // fallback if no posts
+              width: 1200,
+              height: 630,
+              alt: "Digital Marketing Blog",
+            },
+          ],
+    },
+  };
+}
+
+/* ----------------------------
+   ✅ Blog Page Component (UI)
+----------------------------- */
 function toCategorySlug(name: string) {
-  return name.trim().toLowerCase().replace(/\s+/g, '-');
+  return name.trim().toLowerCase().replace(/\s+/g, "-");
 }
 
 export default function BlogPage() {
@@ -18,29 +66,25 @@ export default function BlogPage() {
   const regular = posts.filter((p) => !p.featured);
 
   return (
-  <div className="relative flex min-h-screen flex-col items-center px-4 pb-16 pt-24">
-    {/* Fluid cursor background */}
-    <FluidCursor />
+    <div className="relative flex min-h-screen flex-col items-center px-4 pb-16 pt-24">
+      {/* Fluid cursor background */}
+      <FluidCursor />
 
-{/* Back Navigation */}
-<div className="fixed top-3 left-3 z-50">
-  <Link 
-    href="/"
-    data-gtm="nav-back-home"
-    className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
-              text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
-              hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-  ><ArrowLeft size={16} />
-  <Image 
-      src="/home.gif" 
-      alt="Home" 
-      width={20} 
-      height={16} 
-      unoptimized
-    />
-  </Link>
-</div>    
+      {/* Back Navigation */}
+      <div className="fixed top-3 left-3 z-50">
+        <Link
+          href="/"
+          data-gtm="nav-back-home"
+          className="inline-flex items-center gap-1 rounded-full border bg-white/30 px-2 py-1 
+                    text-xs font-medium text-black shadow-md backdrop-blur-lg transition 
+                    hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
+        >
+          <ArrowLeft size={16} />
+          <Image src="/home.gif" alt="Home" width={20} height={16} unoptimized />
+        </Link>
+      </div>
 
+      {/* Hero */}
       <div className="mb-10 text-center">
         <h1 className="text-5xl font-bold mb-3">Digital Marketing Insights</h1>
         <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">

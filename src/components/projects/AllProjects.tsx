@@ -1,4 +1,5 @@
-"use client";
+{/*
+  "use client";
 import { Card, Carousel } from "@/components/projects/apple-cards-carousel";
 import { data } from "@/components/projects/Data";
 
@@ -19,4 +20,4 @@ export default function AllProjects() {
   );
 }
 
-
+*/}
