@@ -4,6 +4,66 @@ import { Calendar, Clock, ArrowLeft, Eye } from 'lucide-react';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/markdown';
 import { MotionDiv } from '@/components/Motion';
 import FluidCursor from '@/components/FluidCursor'; // 👈 cursor background
+import { Metadata } from 'next'
+
+const blogPostsMetadata = {
+  'social-media-roi-2025': {
+    title: 'Social Media ROI: Measuring What Actually Matters in 2025',
+    description: 'Learn to measure social media ROI beyond vanity metrics. Focus on CAC, CLV, attribution models, and business outcomes that drive growth.',
+    category: 'Social Media'
+  },
+  'future-of-seo-ai-driven-content': {
+    title: 'The Future of SEO: AI-Driven Content Strategies That Actually Work', 
+    description: 'Discover how AI is reshaping SEO in 2025. Learn intent-based clustering, automated content briefs, and AI-driven ranking strategies.',
+    category: 'SEO Strategy'
+  },
+  'cro-landing-page-psychology': {
+    title: 'Landing Page Psychology: 5 Cognitive Biases That Boost Conversions',
+    description: 'Apply behavioral science to boost conversions. Learn anchoring, social proof, scarcity, loss aversion, and authority biases.',
+    category: 'CRO'
+  },
+  'google-ads-performance-max-guide': {
+    title: 'Google Ads Performance Max: Complete Optimization Guide',
+    description: 'Master Performance Max campaigns with step-by-step setup, bidding strategies, asset optimization, and audience signal best practices.',
+    category: 'Google Ads'
+  },
+  'ga4-attribution-models-explained': {
+    title: 'GA4 Attribution Models: Which One Actually Drives Results?',
+    description: 'Compare GA4 attribution models and choose the right one for your business. Understand data-driven attribution and conversion paths.',
+    category: 'Analytics'
+  }
+}
+
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const postData = blogPostsMetadata[slug as keyof typeof blogPostsMetadata]
+  
+  if (!postData) {
+    return {
+      title: 'Blog Post Not Found',
+      description: 'The requested blog post could not be found.'
+    }
+  }
+
+  return {
+    title: `${postData.title} | Digital Marketing Blog`,
+    description: postData.description,
+    openGraph: {
+      title: postData.title,
+      description: postData.description,
+      type: 'article'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: postData.title,
+      description: postData.description
+    }
+  }
+}
 
 type Params = Promise<{ slug: string }>;
 
@@ -102,5 +162,3 @@ export default async function ArticlePage({ params }: { params: Params }) {
     </div>
   );
 }
-
-

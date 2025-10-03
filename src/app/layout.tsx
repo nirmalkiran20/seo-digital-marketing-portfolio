@@ -22,7 +22,7 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://seo-digital-marketing-portfolio.vercel.app"),
-  title: "I am a Digital Marketing Specialist ",
+  title: "Digital Marketing Portfolio ",
   description:
     "Professional SEO and Digital Marketing Specialist with 9.7+ years experience in SEO, SEM, SMM, Google Ads, GA4, and Looker Studio.",
   keywords: ["Kiran", "Portfolio", "Digital Marketer", "AI", "Interactive", "Memoji", "Website Audit", "SEO"],

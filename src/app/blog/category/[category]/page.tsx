@@ -2,6 +2,56 @@ import Link from 'next/link';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag } from 'lucide-react';
 import { getAllCategories, getPostsByCategory } from '@/lib/markdown';
 import FluidCursor from '@/components/FluidCursor';
+import { Metadata } from 'next'
+
+const categoryMetadata = {
+  'analytics': {
+    title: 'Analytics Articles',
+    description: 'Expert insights on Google Analytics 4, attribution models, data analysis, and digital marketing analytics best practices.'
+  },
+  'cro': {
+    title: 'Conversion Rate Optimization (CRO)', 
+    description: 'Proven CRO strategies, landing page psychology, A/B testing guides, and conversion optimization techniques that boost results.'
+  },
+  'google-ads': {
+    title: 'Google Ads & PPC',
+    description: 'Google Ads Performance Max guides, PPC optimization strategies, and paid advertising best practices for better ROAS.'
+  },
+  'seo-strategy': {
+    title: 'SEO Strategy & Techniques',
+    description: 'Advanced SEO strategies, AI-driven content optimization, technical SEO, and search engine optimization best practices.'
+  },
+  'social-media': {
+    title: 'Social Media Marketing',
+    description: 'Social media ROI measurement, platform strategies, content marketing, and social advertising optimization techniques.'
+  }
+}
+
+type Props = {
+  params: Promise<{ category: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { category } = await params
+  const categoryData = categoryMetadata[category as keyof typeof categoryMetadata]
+  
+  if (!categoryData) {
+    return {
+      title: 'Category Not Found',
+      description: 'The requested blog category could not be found.'
+    }
+  }
+
+  return {
+    title: `${categoryData.title} | Digital Marketing Blog`,
+    description: categoryData.description,
+    openGraph: {
+      title: `${categoryData.title} | Digital Marketing Blog`,
+      description: categoryData.description,
+      type: 'website'
+    }
+  }
+}
 
 type Params = Promise<{ category: string }>;
 
